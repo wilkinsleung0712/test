@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+<session-factory>
+     <!-- 
+        Database	Dialect Property
+		DB2 	org.hibernate.dialect.DB2Dialect
+		HSQLDB 	org.hibernate.dialect.HSQLDialect
+		HypersonicSQL	org.hibernate.dialect.HSQLDialect
+		Informix 	org.hibernate.dialect.InformixDialect
+		Ingres 	org.hibernate.dialect.IngresDialect
+		Interbase 	org.hibernate.dialect.InterbaseDialect
+		Microsoft SQL Server 2000 	org.hibernate.dialect.SQLServerDialect
+		Microsoft SQL Server 2005	org.hibernate.dialect.SQLServer2005Dialect
+		Microsoft SQL Server 2008	org.hibernate.dialect.SQLServer2008Dialect
+		MySQL 	org.hibernate.dialect.MySQLDialect
+		Oracle (any version)	org.hibernate.dialect.OracleDialect
+		Oracle 11g	org.hibernate.dialect.Oracle10gDialect
+		Oracle 10g	org.hibernate.dialect.Oracle10gDialect
+		Oracle 9i	org.hibernate.dialect.Oracle9iDialect
+		PostgreSQL 	org.hibernate.dialect.PostgreSQLDialect
+		Progress 	org.hibernate.dialect.ProgressDialect
+		SAP DB 	org.hibernate.dialect.SAPDBDialect
+		Sybase 	org.hibernate.dialect.SybaseDialect
+		Sybase Anywhere 	org.hibernate.dialect.SybaseAnywhereDialect
+        
+        
+         -->
+         
+         
+         <property name="dialect">
+              org.hibernate.dialect.DerbyDialect
+         </property>
+         
+         <property name="connection.driver_class">
+             org.apache.derby.jdbc.EmbeddedDriver
+         </property>
+         <property name="show_sql">true</property>
+          <!-- Assume students is the database name -->
+		   <property name="hibernate.connection.url">
+		      jdbc:derby:C:\Users\Wilkins\workspace\hibernate-relational-db-example\db
+		   </property>
+		   <property name="hibernate.connection.username">
+		      
+		   </property>
+		   <property name="hibernate.connection.password">
+		      
+		   </property>
+	   <property name="hbm2ddl.auto">update</property>
+		<mapping class="model.Student"/>
+    	<mapping class="model.College"/>
+</session-factory>       
+</hibernate-configuration>

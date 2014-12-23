@@ -1,0 +1,3 @@
+model\Student.class
+model\College.class
+view\HibernateUtil.class
